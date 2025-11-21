@@ -2,13 +2,7 @@
 #include <stdio.h>
 #include <curses.h>
 #include <unistd.h>
-
-/*Struct of the player symbol and coords */
-typedef struct{
-        int x;
-	int y;
-	char symbol;
-}Player;
+#include "player.h"
 
 Player createPlayer(){
 	Player p1;

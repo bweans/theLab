@@ -2,6 +2,9 @@
 #include <stdio.h>
 #include <curses.h>
 #include <unistd.h>
+#include "player.h"
+#include "talking_npc.h"
+#include "splash_art.h"
 int main(){
 	WINDOW *w;
 	Player p1;

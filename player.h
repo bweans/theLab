@@ -1,6 +1,6 @@
 //Group 2 -Assignment 2
 #ifndef PLAYER_H
-
+#define PLAYER_H
 //STRUCT START
 
 typedef struct{
