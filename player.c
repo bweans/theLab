@@ -17,12 +17,10 @@ Player createPlayer(int x, int y){
 	return p1;
 }
 
-/* might need this for other functions
 void drawPlayer(){
 	mvaddch(p1.y,p1.s,p1.symbol);
 	refresh();
 }
-*/
 
 Player moveRight(Player p1){
 	mvaddch(p1.y,p1.x,' ');

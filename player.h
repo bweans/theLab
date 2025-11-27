@@ -26,7 +26,13 @@ typedef struct{
 */
 Player createPlayer(int x, int y);
 
-//void drawPlayer(Player p1);
+
+/**
+* This function simply draws the Player
+* @param p1 is the Player
+* @return Player updated and drawn
+*/
+void drawPlayer(Player p1);
 
 /**
 * This function moves the player to the right by 1
