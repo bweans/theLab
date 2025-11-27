@@ -1,4 +1,11 @@
-//Group 2 - Assignment2
+/********************************************************
+ * @file main.c                                         *
+ * @Brief Main driver of the game                       *
+ * @author CMPT201 Group 2                              *
+ * @date Nov. 27, 2025                                  *
+ ********************************************************/
+
+
 #include <stdio.h>
 #include <curses.h>
 #include <unistd.h>
