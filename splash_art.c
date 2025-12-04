@@ -6,7 +6,6 @@
 //The splash screen that will display when opening the game
 int start_art(){
 
-initscr();
 
 addstr("                     ---------   |    |   -------        |             /\\       |------  \n");
 addstr("                         |       |    |   |              |            /  \\      |      | \n");
@@ -22,17 +21,18 @@ refresh();
 //If user input is "q", return 1 so that the quit screen can be called
 char key = getch();
 if (key == 113 || key == 81) {
+	clear();
+	refresh();
 	return 1;
 }
-
+clear();
+refresh();
 return 0;
 
 }
 
 //Splash screen for reaching the end of level 2
 int end_art(){
-
-initscr();
 
 addstr("                     \\     /   /------\\   |      |        |      |   -------   |\\    |\n");
 addstr("                      \\   /    |      |   |      |        |      |      |      | \\   |\n");
@@ -52,8 +52,6 @@ return 0;
 //Splash screen for when the player pauses the game
 int pause_art(){
 
-initscr();
-
 addstr("                     |-----        /\\       |     |   -------   |------   |-----\\\n");
 addstr("                     |     |      /  \\      |     |   |         |         |     |\n");
 addstr("                     |-----      /    \\     |     |   -------   |-----    |     |\n");
@@ -66,16 +64,17 @@ refresh();
 
 char key = getch();
 if (key == 113 || key == 81) {
+	clear();
+	refresh();
 	return 1;
 }
-
+clear();
+refresh();
 return 0;
 
 }
 
 int quit_art(){
-
-initscr();
 
 addstr("                                          |--------------------------------|\n");
 addstr("                                          |                                |\n");
@@ -87,9 +86,12 @@ refresh();
 
 char key = getch();
 if (key == 113 || key == 81) {
+	clear();
+	refresh();
 	return 1;
 }
-
+clear();
+refresh();
 return 0;
 
 }
