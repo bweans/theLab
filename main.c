@@ -11,7 +11,8 @@
 #include <unistd.h>
 #include "player.h"
 #include "splash_art.h"
-#include "level_template.h"
+#include "level_1.h"
+#include "level_2.h"
 int main(){
 	//Ncurse initializing
 	initscr();
@@ -28,12 +29,12 @@ int main(){
 		endwin();
 		return 1;
 	}
-	if (level1() == 1){
+	if (level_1() == 1){
 		getch();
 		endwin();
 		return 1;
 	} 
-	if (level2() == 1){
+	if (level_2() == 1){
                 getch();
                 endwin();
                 return 1;
