@@ -1,6 +1,6 @@
 #ifndef LEVEL_2_H
 #define LEVEL_2_H
-#define start_count 6
+#define start_count2 6
 /**
 * @brief This function serves as the main function for level 2.
 */

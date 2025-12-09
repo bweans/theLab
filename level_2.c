@@ -9,9 +9,9 @@
 int level_2(){
 	int input;
  	//represents the object the player needs to collect.  change start_count in the header file depending on your key count
-        int key_count = start_count;
+        int key_count = start_count2;
 	//Tracks the location of each key.  Second array is the coord as (x,y)
-	int key_location[start_count][2] = { 
+	int key_location[start_count2][2] = { 
 		{6,18},
 		{22,24},
 		{26,20},
@@ -81,7 +81,7 @@ int level_2(){
                         }
                         if(mvinch(p1.y,p1.x+1) == '0'){
 				mvaddch(p1.y,p1.x+1,' ');
-				for(int i = 0; i < start_count; i++){
+				for(int i = 0; i < start_count2; i++){
 					if(p1.y == key_location[i][1] && p1.x+1 == key_location[i][0]){
 						key_location[i][0] = -1;
 						key_location[i][1] = -1;
@@ -90,7 +90,7 @@ int level_2(){
 				key_count-=1;
 			} else if (mvinch(p1.y,p1.x-1) == '0'){
                                 mvaddch(p1.y,p1.x-1,' ');
-                                for(int i = 0; i < start_count; i++){
+                                for(int i = 0; i < start_count2; i++){
                                         if(p1.y == key_location[i][1] && p1.x-1 == key_location[i][0]){
                                                 key_location[i][0] = -1;
                                                 key_location[i][1] = -1;
@@ -98,7 +98,7 @@ int level_2(){
                                 }
 				key_count-=1;
 			} else if (mvinch(p1.y-1,p1.x) == '0'){
-                                for(int i = 0; i < start_count; i++){
+                                for(int i = 0; i < start_count2; i++){
                                         if(p1.y-1 == key_location[i][1] && p1.x == key_location[i][0]){
                                                 key_location[i][0] = -1;
                                                 key_location[i][1] = -1;
@@ -107,7 +107,7 @@ int level_2(){
                                 mvaddch(p1.y-1,p1.x,' ');
 				key_count-=1;
 			} else if (mvinch(p1.y+1,p1.x) == '0'){
-                                for(int i = 0; i < start_count; i++){
+                                for(int i = 0; i < start_count2; i++){
                                         if(p1.y+1 == key_location[i][1] && p1.x == key_location[i][0]){
                                                 key_location[i][0] = -1;
                                                 key_location[i][1] = -1;
@@ -142,12 +142,12 @@ int level_2(){
 	                mvprintw(6,83,"DOOR IS OPEN GOGOGO!");
 		}
         	mvprintw(5,83,"Keys Left: %d",key_count);
-		mvprintw(4,83,"Total Keys: %d",start_count);
+		mvprintw(4,83,"Total Keys: %d",start_count2);
                 refresh();
         }
 
 }
-void refresh_level2(Player p1, Player NPC,int key_location[start_count][2]){
+void refresh_level2(Player p1, Player NPC,int key_location[start_count2][2]){
         //Draws Wall,Doors & Exit
 	draw_level2();
 	//Draw UI
@@ -163,7 +163,7 @@ void refresh_level2(Player p1, Player NPC,int key_location[start_count][2]){
         drawPlayer(p1);
         drawPlayer(NPC);
         // Draws the uncollected keys
-        for(int i = 0; i < start_count; i++){
+        for(int i = 0; i < start_count2; i++){
                 if(key_location[i][0] != 0 && key_location[i][1] != 0){
                         mvaddch(key_location[i][1],key_location[i][0],'0');
                 }
