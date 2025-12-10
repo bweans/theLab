@@ -1,18 +1,23 @@
-#Desmond Hui  - Assignment 1
-#ID: 3152710
+#Group 2 - Assignment 2
+#Tyson May and Desmond Hui
 CC = gcc
 CFLAGS = -Wall -std=c11
 LDFLAGS = -lm -lc -lncurses -ltinfo
-APP = App
-$(APP): main.o player.o splash_art.o level1.o level2.o
+APP = appGame
+DIR = bin
+TARGET = $(DIR)/$(APP)
+
+all: $(TARGET)
+$(TARGET): main.o player.o splash_art.o level_1.o level_2.o | $(DIR)
 	 $(CC) $(CFLAGS) $(LDFLAGS) $^ -o $@
+$(DIR):
+	mkdir -p bin
 %.o: %.c %.h
 	$(CC) $(CFLAGS) -c $<
+
 .PHONY:
 clean:
-	rm -f *.o $(APP)
-test: main_test.o player.o splash_art.o level_template.o
-	$(CC) $(CFLAGS) $(LDFLAGS) $^ -o $@
+	rm -f *.o $(APP) -r bin
 
 run: $(APP)
 	./$(APP)
